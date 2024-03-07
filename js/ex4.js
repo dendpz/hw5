@@ -32,17 +32,17 @@ const studentList = [
   },
 ];
 
-studentList.forEach((student) => {
-  student.scores.forEach((scores, num) => {
-    student.scores[num] = scores + 5;
-  })
-})
-//console.log(studentList);
-
-studentList.map( student => x.scores);
-/*
 studentList.map(student => {
   student.scores = student.scores.map(grade => grade + 5);
+  avg = student.scores.reduce((beg, end) => beg + end, 0) / student.scores.length;
+  student.scores.push(avg);
 })
-console.log(studentList);
-*/
+
+const output = (stuArray) => {
+  stuArray.forEach(student => {
+    console.log(`Full name (last, first): ${student.lastName}, ${student.firstName}`);
+    console.log(`Updated scores are: ${student.scores}`);
+  })
+}
+
+output(studentList);
